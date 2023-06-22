@@ -2,6 +2,7 @@
     @auth
         <li class="menu-item has-children"><a href="#">Administración</a>
             <ul class="sub-menu">
+                <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('transparencia-admin.index') }}">Transparencia & Rendición de Cuentas</a></li>
                 <li><a href="{{ route('noticias-admin.index') }}">Noticias</a></li>
                 <li><a href="{{ route('slider.index') }}">Slider</a></li>
