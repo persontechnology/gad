@@ -2,7 +2,7 @@
 
 @section('content')
     <!--====== Start Page-title-area section ======-->
-    <section class="page-title-area text-white bg_cover" style="background-image: url(assets/images/bg/page-bg-1.jpg);">
+    <section class="page-title-area text-white bg_cover" style="background-image: url({{ asset('assets/images/bg/page-bg-1.jpg') }});">
         <div class="container">
             <!--======  Page-title-Inner ======-->
             <div class="page-title-inner text-center">

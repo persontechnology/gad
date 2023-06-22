@@ -39,6 +39,8 @@
     </head>
     <body>
 
+        @include('sections.alert')
+        
         @php
             $empresa=App\Models\Empresa::first();
         @endphp
@@ -64,7 +66,7 @@
             </div>
         </div><!--====== Search From ======-->
         <!--====== Sidebar Wrapper ======-->
-        <div class="modal fade sidebar-panel-wrapper" id="sidebar-modal">
+        {{-- <div class="modal fade sidebar-panel-wrapper" id="sidebar-modal">
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <button class="close" data-dismiss="modal"><i class="far fa-times"></i></button>
@@ -185,7 +187,8 @@
                     </div>
                 </div>
             </div>
-        </div><!--====== Sidebar Wrapper ======-->
+        </div> --}}
+        <!--====== Sidebar Wrapper ======-->
         <!--====== Start Header ======-->
         <header class="header-area header-three">
             @include('sections.header-top-bar-two',['empresa'=>$empresa])
@@ -204,43 +207,43 @@
                         <div class="nav-menu">
                             <!-- Mobile Logo -->
                             <div class="mobile-logo mb-30 d-block d-xl-none text-center">
-                                <a href="index.html" class="brand-logo"><img src="assets/images/logo/logo-black.png" alt="Site Logo"></a>
+                                <a href="{{ route('welcome') }}" class="brand-logo"><img src="{{ asset(Storage::url($empresa->logo)) }}" alt="Site Logo"></a>
                             </div>
                             <!--=== Nav Search ===-->
-                            <div class="nav-search mb-30 d-block d-xl-none ">
+                            {{-- <div class="nav-search mb-30 d-block d-xl-none ">
                                 <form>
                                     <div class="form_group">
                                         <input type="email" class="form_control" placeholder="Search Here" name="email" required>
                                         <button class="search-btn"><i class="fas fa-search"></i></button>
                                     </div>
                                 </form>
-                            </div>
+                            </div> --}}
                             <!--=== Main menu ===-->
                             <nav class="main-menu">
                                 @include('sections.main-menu')
                             </nav>
                             <!--====== Menu Button ======-->
                             <div class="menu-button mt-40 d-xl-none">
-                                <a href="contact.html" class="main-btn secondary-btn">Get a Quote</a>
+                                <a href="{{ route('contacto') }}" class="main-btn secondary-btn">Contacto</a>
                             </div>
                         </div>
                         <!--======= Nav Right Item ======-->
                         <div class="nav-right-item d-flex align-items-center">
                             
-                            <div class="lang-dropdown">
+                            {{-- <div class="lang-dropdown">
                                 <select class="wide">
                                     <option value="English">English</option>
                                     <option value="French">French</option>
                                 </select>
                             </div>
 
-                            <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i class="far fa-search"></i></div>
+                            <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i class="far fa-search"></i></div> --}}
                             
                             <div class="menu-button d-xl-block d-none">
-                                <a href="contact.html" class="main-btn secondary-btn">Book now</a>
+                                <a href="{{ route('contacto') }}" class="main-btn secondary-btn">Contacto</a>
                             </div>
 
-                            <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal"><img src="assets/images/bar2.png" alt="Image"></div>
+                            {{-- <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal"><img src="{{ asset('assets/images/bar2.png') }}" alt="Image"></div> --}}
                             <div class="navbar-toggler">
                                 <span></span>
                                 <span></span>
